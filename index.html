@@ -8,191 +8,344 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
     <div class="container">
-        <!-- ヘッダー -->
-        <header class="header">
-            <div class="header-content">
-                <h1 class="logo">BUNNYOKAYAMA</h1>
-                <p class="subtitle">岡山メンズエステ</p>
-            </div>
-        </header>
-
-        <!-- メインビジュアル -->
+        <!-- 1. ファーストビュー + CVボタン -->
         <section class="hero">
-            <div class="hero-content">
-                <h2 class="hero-title">
-                    <span class="highlight">ポイ活</span>始めませんか？
-                </h2>
-                <p class="hero-subtitle">お得なポイント還元で、もっと贅沢なひとときを。</p>
-                <p class="point-rate-info"><strong>1ポイント＝1円</strong>としてご利用いただけます</p>
+            <h1 class="animated-title">ポイ活始めませんか？</h1>
+            <p class="animated-subtitle">お得なポイント還元で、もっと贅沢なひとときを。</p>
+            <div class="point-card">
+                <div class="badge">初回限定</div>
+                <div class="rate">20%</div>
+                <div class="label">還元</div>
+            </div>
+            <p class="info">1ポイント＝1円としてご利用いただけます</p>
+            <div class="buttons">
+                <a href="https://lin.ee/wSFMv3o" class="btn line" target="_blank">
+                    📱 オフィシャルLINE登録
+                </a>
+                <a href="https://estama.jp/shop/43713/" class="btn reserve" target="_blank">
+                    📅 ご予約はこちら
+                </a>
             </div>
         </section>
 
-        <!-- 初回限定20%還元セクション -->
-        <section class="first-time-discount-section">
-            <div class="section-content">
-                <div class="point-card first-time">
-                    <div class="point-badge">初回限定</div>
-                    <div class="point-rate">20%</div>
-                    <div class="point-label">還元</div>
+        <!-- 2. 共感 -->
+        <section class="empathy">
+            <h2>こんなお悩みありませんか？</h2>
+            <div class="problems">
+                <div class="problem">
+                    <div class="number">1</div>
+                    <h3>お気に入りのセラピストをもっとお得に指名したい</h3>
+                    <p>いつものセラピストさんを指名したいけれど、指名料も含めるとちょっと高くなってしまう...</p>
                 </div>
+                <div class="problem">
+                    <div class="number">2</div>
+                    <h3>初めての利用だから少しでもお得に試してみたい</h3>
+                    <p>初回だからこそ、お得に利用できる方法があれば安心して試せるのに...</p>
+                </div>
+                <div class="problem">
+                    <div class="number">3</div>
+                    <h3>クーポン以外にもお得に遊べる方法があれば嬉しい</h3>
+                    <p>クーポンだけじゃなく、他にもお得になる仕組みがあったらもっと通いやすいのに...</p>
+                </div>
+            </div>
+            <div class="image">
+                <img src="hito.jpeg" alt="セラピスト画像" />
+            </div>
+            <div class="solution animated-solution">
+                <h3>そんなお悩みを解決するのがBUNNYOKAYAMAのポイ活です！</h3>
             </div>
         </section>
 
-        <!-- ポイント還元率 -->
-        <section class="points-section">
-            <div class="section-content">
-                <h3 class="section-title">ポイント還元率</h3>
-                <div class="points-grid">
-                    <div class="point-item">
-                        <div class="point-icon">🎉</div>
-                        <h4>初回ご利用</h4>
-                        <div class="rate">20%還元</div>
-                        <p>初回のお客様には特別に20%のポイントを還元いたします</p>
-                        <div class="example">
-                            <strong>例1）</strong>初回利用者コース料金15,000円 + 指名料1,000円 計16,000円で利用<br>
-                            → コース料金15,000円の20%還元<br>
-                            <span class="example-point">（3,000pt）</span>
-                        </div>
+        <!-- 3. ベネフィット -->
+        <section class="benefits">
+            <h2>ポイ活で得られる2つのメリット</h2>
+            <div class="benefit-list">
+                <div class="benefit">
+                    <div class="icon">💰</div>
+                    <h3>① 継続利用で総額がお得に！</h3>
+                    <p>ポイ活でポイントを貯めれば、実質的に"次回のお支払いが安く"なります！</p>
+                    <div class="example">
+                        <h4>🔹 例：</h4>
+                        <p>ご新規様 スタンダードコース100分（フリー）<br>
+                        ▶ 総額 15,000円 → 3,000ポイント還元！<br>
+                        → 貯まったポイントで次回の指名料・オプション代が実質無料に！</p>
                     </div>
-                    <div class="point-item">
-                        <div class="point-icon">💎</div>
-                        <h4>2回目以降</h4>
-                        <div class="rate">2%還元</div>
-                        <p>リピーターのお客様には毎回2%のポイントを還元</p>
-                        <div class="example">
-                            <strong>例2）</strong>2回目以降 コース料金15,000円 + 指名料1,000円 計16,000円で利用<br>
-                            → コース料金15,000円の2%還元<br>
-                            <span class="example-point">（300pt）</span>
-                        </div>
-                    </div>
-                    <div class="point-item">
-                        <div class="point-icon">✨</div>
-                        <h4>新人割利用者</h4>
-                        <div class="rate">4%還元</div>
-                        <p>新人割をご利用いただくと4%の特別還元</p>
-                        <div class="example">
-                            <strong>例3）</strong>新人割利用者 コース料金10,000円 + 指名料1,000円 計11,000円で利用<br>
-                            → コース料金10,000円の4%還元<br>
-                            <span class="example-point">（400pt）</span>
-                        </div>
-                    </div>
-　　　　　<div class="point-item">
-　　　　　<div class="point-item-center">
-            <div class="point-icon">⚠️</div>
-            <div class="rate">ポイント還元は</div>
-            <p class="note">
-                ・コース料金のみ対象<br>
-                ・クーポン等でご予約の際は割引されたコース料金が対象になります。<br>
-　　　　　</div>
                 </div>
+                    <div class="benefit">
+                        <div class="icon">🛍️</div>
+                        <h3>② Amazonギフトカードにも交換OK！</h3>
+                        <p>貯まったポイントは、お買い物にも使えるから超お得！</p>
+                        <div class="amazon-image">
+                            <img src="amazon_gift.jpg" alt="amazon_gift" />
+                        </div>
+                        <div class="example">
+                            <h4>🔹 例：</h4>
+                            <p>5,000ポイント 貯めると → 5,000円分のAmazonギフトカードと交換可能！</p>
+                        </div>
+                    </div>
+            </div>
         </section>
 
         <!-- ポイント交換対象 -->
-        <section class="usage-section">
-            <div class="section-content">
-                <h3 class="section-title">ポイント交換対象</h3>
-                <div class="usage-row">
-                    <div class="usage-item">
-                        <div class="usage-icon">💆‍♂️</div>
-                        <span>コース料金</span>
-                    </div>
-                    <div class="usage-item">
-                        <div class="usage-icon">👤</div>
-                        <span>指名料</span>
-                    </div>
-                    <div class="usage-item">
-                        <div class="usage-icon">⭐</div>
-                        <span>オプション</span>
-                    </div>
-                    <div class="usage-item">
-                        <div class="usage-icon">⏰</div>
-                        <span>延長料金</span>
-                    </div>
+        <section class="usage">
+            <h2>ポイント交換対象</h2>
+            <div class="usage-items">
+                <div class="item">
+                    <div class="icon">💆‍♂️</div>
+                    <span>コース</span>
                 </div>
-                <p class="usage-note">全てのサービスにおいてポイント1pt=1円換算で交換可能です</p>
+                <div class="item">
+                    <div class="icon">👤</div>
+                    <span>指名料</span>
+                </div>
+                <div class="item">
+                    <div class="icon">⭐</div>
+                    <span>オプション</span>
+                </div>
+                <div class="item">
+                    <div class="icon">⏰</div>
+                    <span>延長料金</span>
+                </div>
+            </div>
+            <p class="note">全てのサービスにおいてポイント1pt=1円換算で交換可能です</p>
+        </section>
+
+        <!-- 4. 実績・事例 + CVボタン -->
+        <section class="results">
+            <h2>ポイント還元実績</h2>
+            <div class="stats">
+                <div class="stat">
+                    <div class="number">20%</div>
+                    <div class="label">初回還元率</div>
+                    <p>初回ご利用のお客様には特別に20%の高還元率でポイントをプレゼント</p>
+                </div>
+                <div class="stat">
+                    <div class="number">3,000pt</div>
+                    <div class="label">初回獲得例</div>
+                    <p>15,000円のコースご利用で3,000ポイント獲得（次回3,000円分として利用可能）</p>
+                </div>
+                <div class="stat">
+                    <div class="number">4%</div>
+                    <div class="label">新人割併用時</div>
+                    <p>新人割をご利用いただくと通常の2倍の4%還元でさらにお得</p>
+                </div>
+            </div>
+            <h3>実際の還元例</h3>
+            <div class="examples">
+                <div class="example-card">
+                            <h4>初回利用者様</h4>
+                            <p>コース：スタンダードコース100分15,000円</p>
+                            <p>指名料：1,000円</p>
+                            <p>合計：16,000円</p>
+                            <p class="center-text">コース料金がポイント還元対象なので</p>
+                            <div class="arrow">↓</div>
+                            <p class="points">獲得ポイント：3,000pt</p>
+                        </div>
+                        <div class="example-card">
+                            <h4>新人割利用者様</h4>
+                            <p>コース：スタンダードコース100分　10,000円</p>
+                            <p>指名料：1,000円</p>
+                            <p>合計：11,000円</p>
+                            <p class="center-text">コース料金がポイント還元対象なので</p>
+                            <div class="arrow">↓</div>
+                            <p class="points">獲得ポイント：400pt</p>
+                </div>
+            </div>
+            <div class="point-notice">
+                <div class="rate">ポイント還元は</div>
+                <p class="note">
+                    ・コース料金のみ対象<br>
+                    ・クーポン等でご予約の際は割引されたコース料金が対象になります。
+                </p>
+            </div>
+            <div class="buttons cv-buttons-center">
+                <a href="https://lin.ee/wSFMv3o" class="btn line" target="_blank">
+                    📱 オフィシャルLINE登録
+                </a>
+                <a href="https://estama.jp/shop/43713/" class="btn reserve" target="_blank">
+                    📅 ご予約はこちら
+                </a>
             </div>
         </section>
 
-        <!-- Amazon交換 -->
-        <section class="amazon-section">
-            <div class="section-content">
-                <h3 class="section-title">Amazonギフトカードに交換可能！</h3>
-                <div class="amazon-content">
-                    <div class="amazon-text">
-                        <p>貯まったポイントは、BUNNYOKAYAMAでのご利用だけでなく、<strong>Amazonギフトカード</strong>にも交換可能です。</p>
-                        <p>お好きなタイミングで、お好きな商品をお買い物いただけます。</p>
+        <!-- 5. お客様の声 -->
+        <section class="testimonials">
+            <h2>お客様の声</h2>
+            <div class="testimonial-list">
+                <div class="testimonial">
+                    <div class="avatar">👨‍💼</div>
+                    <h4>30代 会社員 A様</h4>
+                    <p>「初回で3,000ポイントも貯まって驚きました！次回はそのポイントを使ってオプションも追加できそうです。通うほどお得になるのが嬉しいですね。」</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="testimonial">
+                    <div class="avatar">👨‍🎓</div>
+                    <h4>20代 学生 B様</h4>
+                    <p>「新人割と併用で4%還元は本当にお得！学生の僕にとって少しでも安く利用できるのは助かります。Amazonギフトカードにも交換できるのが便利です。」</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="testimonial">
+                    <div class="avatar">👨‍💻</div>
+                    <h4>40代 自営業 C様</h4>
+                    <p>「毎月通っているので、2%でもコツコツ貯まっていきます。半年で結構なポイントになって、実質的な割引を受けられているような感覚です。」</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. フロー -->
+        <section class="flow">
+            <h2>ポイ活の始め方（ご利用手順）</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="number">1</div>
+                    <div class="content">
+                        <h3>まずは当店のコースをご利用ください</h3>
+                        <p>お好きなコースをご予約・ご利用いただくと、自動的にポイントが貯まります。</p>
                     </div>
-                    <div class="amazon-image">
-                        <img src="amazon_gift.jpg" alt="Amazonギフトカード" />
+                </div>
+                <div class="arrow">↓</div>
+                <div class="step">
+                    <div class="number">2</div>
+                    <div class="content">
+                        <h3>BUNNYOKAYAMA公式LINEにてポイント残高を確認</h3>
+                        <p>ご利用後、公式LINEにて「現在のポイント残高を確認したい」旨をお問い合わせください。</p>
+                    </div>
+                </div>
+                <div class="arrow">↓</div>
+                <div class="step">
+                    <div class="number">3</div>
+                    <div class="content">
+                        <h3>ポイント使用希望をお伝えください</h3>
+                        <p>ポイントをご利用になる際は、ご予約時に「ポイント使用希望」とお伝えください。</p>
+                    </div>
+                </div>
+                <div class="arrow">↓</div>
+                <div class="step">
+                    <div class="number">4</div>
+                    <div class="content">
+                        <h3>スタッフにて適用の可否を確認し、ご案内いたします</h3>
+                        <p>※ポイントのご利用には条件がある場合がございますので、事前にLINEにてご確認いただくとスムーズです。</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 条件・登録 -->
-        <section class="registration-section">
-            <div class="section-content">
-                <h3 class="section-title">ポイントサービスご利用条件</h3>
-                <div class="condition-box">
-                    <p class="condition-text">ポイントサービスをご利用いただくには、<br><strong>BUNNYOKAYAMAオフィシャルLINE</strong>へのご登録が必須となります。</p>
+        <!-- 7. FAQ -->
+        <section class="faq">
+            <h2>よくあるご質問（FAQ）</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="question">
+                        <h3>Q. ポイントに使用期限はありますか？</h3>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="answer">
+                        <p>A. ポイントの使用期限は無期限となっておりますので、ご安心くださいませ。</p>
+                    </div>
                 </div>
-                
-                <div class="point-check-box">
-                    <h4 class="point-check-title">保有ポイントの残高・利用状況について</h4>
-                    <p class="point-check-text">オフィシャルLINEにて「お電話番号」をご送信のうえ、<br>ポイント確認希望の旨をご連絡くださいませ。</p>
+                <div class="faq-item">
+                    <div class="question">
+                        <h3>Q. Amazonギフトカードへの交換は何ポイントから可能ですか？</h3>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="answer">
+                        <p>A. 1,000ポイント（＝1,000円分）単位で交換が可能です。交換をご希望の際は、お気軽にご相談くださいませ。</p>
+                    </div>
                 </div>
-                
-                <div class="cta-buttons">
-                    <a href="https://lin.ee/wSFMv3o" class="btn btn-line" target="_blank">
-                        <span class="btn-icon">📱</span>
-                        オフィシャルLINE登録
-                    </a>
-                    <a href="https://estama.jp/shop/43713/" class="btn btn-reserve" target="_blank">
-                        <span class="btn-icon">📅</span>
-                        ご予約はこちら
-                    </a>
+                <div class="faq-item">
+                    <div class="question">
+                        <h3>Q. LINEが使えないのですが、ポイントは貯まりますか？</h3>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="answer">
+                        <p>A. 誠に恐れ入りますが、LINEのご登録がポイント付与の必須条件となっております。何卒ご了承くださいませ。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="question">
+                        <h3>Q. クレジットカードで支払った場合のポイント還元はどうなりますか？</h3>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="answer">
+                        <p>A. クレジットカード決済時のポイント還元は、手数料を除いたコース料金部分が対象となります。詳細はご利用時にスタッフまでご確認くださいませ。</p>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <!-- 8. クロージング + CVボタン -->
+        <section class="closing">
+            <h2 class="animated-closing">今すぐポイ活を始めてお得にBUNNYOKAYAMAを楽しもう！</h2>
+            <div class="benefits-list">
+                <div class="benefit-check">
+                    <span class="check">✓</span>
+                    <span>初回20%の高還元率</span>
+                </div>
+                <div class="benefit-check">
+                    <span class="check">✓</span>
+                    <span>リピーターも毎回2%還元</span>
+                </div>
+                <div class="benefit-check">
+                    <span class="check">✓</span>
+                    <span>新人割併用で4%還元</span>
+                </div>
+                <div class="benefit-check">
+                    <span class="check">✓</span>
+                    <span>Amazonギフトカードにも交換可能</span>
+                </div>
+                <div class="benefit-check">
+                    <span class="check">✓</span>
+                    <span>1ポイント=1円で利用可能</span>
+                </div>
+            </div>
+            <p class="message">ポイ活を始めるのに必要なのはオフィシャルLINE登録だけ！</p>
+            <div class="buttons">
+                <a href="https://lin.ee/wSFMv3o" class="btn line large" target="_blank">
+                    📱 オフィシャルLINE登録
+                </a>
+                <a href="https://estama.jp/shop/43713/" class="btn reserve large" target="_blank">
+                    📅 ご予約はこちら
+                </a>
+            </div>
+            <p class="note">※ポイントサービスの詳細については、オフィシャルLINEにてお問い合わせください。</p>
         </section>
 
         <!-- フッター -->
         <footer class="footer">
-            <div class="footer-content">
-                <h4 class="footer-logo">BUNNYOKAYAMA</h4>
-                <p class="footer-text">岡山メンズエステ</p>
-                <p class="footer-note">※ポイントサービスの詳細については、オフィシャルLINEにてお問い合わせください。</p>
-            </div>
+            <h4>BUNNYOKAYAMA</h4>
+            <p>岡山メンズエステ</p>
+            <p>お得なポイ活で、もっと贅沢なひとときを。</p>
         </footer>
     </div>
 
     <script>
-        // スムーススクロール
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // アニメーション
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
+        // FAQ アコーディオン
+        document.querySelectorAll('.question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const answer = faqItem.querySelector('.answer');
+                const toggle = question.querySelector('.toggle');
+                
+                faqItem.classList.toggle('active');
+                
+                if (faqItem.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    toggle.textContent = '-';
+                } else {
+                    answer.style.maxHeight = '0';
+                    toggle.textContent = '+';
                 }
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.point-item, .usage-item, .amazon-content').forEach(el => {
-            observer.observe(el);
         });
     </script>
 </body>
