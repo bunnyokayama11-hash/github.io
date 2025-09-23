@@ -1285,94 +1285,32 @@ h2::after {
 
 
 .hero-cv-message {
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin: 10px auto;
     color: white;
-    font-size: 1.3rem;
-    font-weight: 700;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    animation: heroMessagePulse 2s infinite, heroMessageGlow 3s infinite;
-    background: rgba(255, 215, 0, 0.2);
-    padding: 15px 20px;
-    border-radius: 25px;
-    border: 2px solid #ffd700;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-cv-message::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-    animation: heroMessageShine 2.5s infinite;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    max-width: 280px;
 }
 
 .hero-cv-message p {
     margin: 0;
-    position: relative;
-    z-index: 1;
+    animation: blink 2s infinite;
 }
 
 .hero-cv-arrow {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: #ffd700;
-    animation: heroArrowBounce 1s infinite, heroArrowGlow 2s infinite alternate;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    filter: drop-shadow(0 0 15px #ffd700);
-    margin-bottom: 20px;
-    font-weight: 900;
+    margin: 5px 0;
+    animation: bounce 1s infinite;
 }
 
 
-@keyframes heroMessagePulse {
-    0%, 100% {
-        transform: scale(1);
-        border-color: #ffd700;
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
     }
-    50% {
-        transform: scale(1.05);
-        border-color: #ff69b4;
-    }
-}
-
-@keyframes heroMessageGlow {
-    0%, 100% {
-        box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
-    }
-    50% {
-        box-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 105, 180, 0.6);
-    }
-}
-
-@keyframes heroMessageShine {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 100%;
-    }
-}
-
-@keyframes heroArrowBounce {
-    0%, 100% {
-        transform: translateY(0) scale(1);
-    }
-    50% {
-        transform: translateY(-10px) scale(1.1);
-    }
-}
-
-@keyframes heroArrowGlow {
-    0% {
-        filter: drop-shadow(0 0 15px #ffd700);
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    }
-    100% {
-        filter: drop-shadow(0 0 25px #ffd700) drop-shadow(0 0 35px #ff69b4);
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 20px #ffd700;
+    51%, 100% {
+        opacity: 0.5;
     }
 }
