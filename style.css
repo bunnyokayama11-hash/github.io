@@ -19,7 +19,99 @@ body {
     box-shadow: 0 0 20px rgba(255, 105, 180, 0.1);
 }
 
-/* ポップアップスタイル */
+/* 新しいポップアップスタイル */
+#new-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10001;
+    animation: fadeIn 0.5s ease-out;
+}
+
+#new-popup-content {
+    background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    max-width: 350px;
+    width: 90%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    animation: newPopupSlideIn 0.8s ease-out;
+    position: relative;
+    border: 3px solid #ffd700;
+}
+
+#new-popup-content::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #ffd700, #ff69b4, #00c300, #ffd700);
+    background-size: 400% 400%;
+    border-radius: 25px;
+    z-index: -1;
+    animation: gradientRotate 2s linear infinite;
+}
+
+.new-popup-message {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.new-popup-date {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffd700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    animation: dateGlow 2s infinite alternate;
+    filter: drop-shadow(0 0 10px #ffd700);
+}
+
+.new-popup-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    animation: textPulse 2s infinite;
+}
+
+#close-new-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#close-new-popup:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* 既存のポップアップスタイル */
 #popup-overlay {
     position: fixed;
     top: 0;
@@ -79,19 +171,6 @@ body {
     margin-bottom: 15px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     animation: textPulse 2s infinite;
-}
-
-.popup-start-date {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #ffd700;
-    background: #ff1493;
-    padding: 8px 15px;
-    border-radius: 8px;
-    margin-top: -10px;
-    display: inline-block;
-    animation: fadeInScale 1s ease-out;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
 .popup-arrow {
@@ -263,21 +342,6 @@ h2::after {
 .hero > p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-}
-
-.start-date {
-    font-size: 1.8rem; /* フォントサイズを大きく */
-    font-weight: 900; /* フォントをさらに太く */
-    color: #ffffff; /* 文字色を白に */
-    background: linear-gradient(45deg, #ff416c, #ff4b2b); /* グラデーション背景 */
-    padding: 15px 30px; /* パディングを大きく */
-    border-radius: 50px; /* 角を丸く */
-    margin-top: -20px;
-    display: inline-block;
-    animation: pulse 1.5s infinite, fadeInScale 1s ease-out; /* pulseアニメーションを追加 */
-    box-shadow: 0 8px 25px rgba(255, 65, 108, 0.4); /* 影を強調 */
-    border: 3px solid #ffd700; /* 枠線を追加 */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* テキストに影を追加 */
 }
 
 .point-card {
@@ -526,7 +590,6 @@ h2::after {
 .example p {
     color: #555;
     font-size: 0.9rem;
-    margin: 0;
 }
 
 .amazon-image {
@@ -995,6 +1058,20 @@ h2::after {
         font-size: 1.1rem !important;
         padding: 15px 25px !important;
     }
+
+    /* 新しいポップアップのレスポンシブ */
+    #new-popup-content {
+        padding: 30px 20px;
+        max-width: 320px;
+    }
+
+    .new-popup-date {
+        font-size: 1.6rem;
+    }
+
+    .new-popup-text {
+        font-size: 1.4rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1050,6 +1127,20 @@ h2::after {
     .popup-arrow {
         font-size: 1.5rem;
     }
+
+    /* 新しいポップアップのレスポンシブ */
+    #new-popup-content {
+        padding: 25px 15px;
+        max-width: 300px;
+    }
+
+    .new-popup-date {
+        font-size: 1.4rem;
+    }
+
+    .new-popup-text {
+        font-size: 1.2rem;
+    }
 }
 
 /* アニメーション効果 */
@@ -1059,6 +1150,32 @@ h2::after {
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes newPopupSlideIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(-100px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1) translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes dateGlow {
+    0% {
+        filter: drop-shadow(0 0 10px #ffd700);
+        transform: scale(1);
+    }
+    100% {
+        filter: drop-shadow(0 0 20px #ffd700) drop-shadow(0 0 30px #ffff00);
+        transform: scale(1.05);
     }
 }
 
@@ -1311,7 +1428,6 @@ h2::after {
     animation: bounceIn 1s ease-out 0.7s both;
 }
 
-
 .hero-cv-message {
     margin: 10px auto;
     color: white;
@@ -1333,7 +1449,6 @@ h2::after {
     animation: bounce 1s infinite;
 }
 
-
 @keyframes blink {
     0%, 50% {
         opacity: 1;
@@ -1342,32 +1457,3 @@ h2::after {
         opacity: 0.5;
     }
 }
-
-/* アニメーション */
-@keyframes fadeInScale {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-
-
