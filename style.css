@@ -81,6 +81,19 @@ body {
     animation: textPulse 2s infinite;
 }
 
+.popup-start-date {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffd700;
+    background: #ff1493;
+    padding: 8px 15px;
+    border-radius: 8px;
+    margin-top: -10px;
+    display: inline-block;
+    animation: fadeInScale 1s ease-out;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
 .popup-arrow {
     font-size: 2rem;
     color: #ffd700;
@@ -250,6 +263,19 @@ h2::after {
 .hero > p {
     font-size: 1.2rem;
     margin-bottom: 30px;
+}
+
+.start-date {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffd700;
+    background: #ff1493;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: -20px;
+    display: inline-block;
+    animation: fadeInScale 1s ease-out;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .point-card {
@@ -1314,3 +1340,16 @@ h2::after {
         opacity: 0.5;
     }
 }
+
+/* アニメーション */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
