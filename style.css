@@ -266,16 +266,18 @@ h2::after {
 }
 
 .start-date {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #ffd700;
-    background: #ff1493;
-    padding: 10px 20px;
-    border-radius: 10px;
+    font-size: 1.8rem; /* フォントサイズを大きく */
+    font-weight: 900; /* フォントをさらに太く */
+    color: #ffffff; /* 文字色を白に */
+    background: linear-gradient(45deg, #ff416c, #ff4b2b); /* グラデーション背景 */
+    padding: 15px 30px; /* パディングを大きく */
+    border-radius: 50px; /* 角を丸く */
     margin-top: -20px;
     display: inline-block;
-    animation: fadeInScale 1s ease-out;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    animation: pulse 1.5s infinite, fadeInScale 1s ease-out; /* pulseアニメーションを追加 */
+    box-shadow: 0 8px 25px rgba(255, 65, 108, 0.4); /* 影を強調 */
+    border: 3px solid #ffd700; /* 枠線を追加 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* テキストに影を追加 */
 }
 
 .point-card {
@@ -1352,4 +1354,20 @@ h2::after {
         transform: scale(1);
     }
 }
+
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
 
