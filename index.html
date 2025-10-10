@@ -8,18 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- 新しいポップアップ -->
-    <div id="new-popup-overlay">
-        <div id="new-popup-content">
-            <div class="new-popup-message">
-                <div class="new-popup-date">10/27(月)から</div>
-                <div class="new-popup-text">ポイ活スタート</div>
-            </div>
-            <button id="close-new-popup">×</button>
-        </div>
-    </div>
-
-    <!-- 既存のポップアップ -->
+    <!-- ポップアップ -->
     <div id="popup-overlay">
         <div id="popup-content">
             <div class="popup-message">
@@ -47,6 +36,10 @@
         <!-- 1. ファーストビュー + CVボタン -->
         <section class="hero">
             <h1 class="animated-title">ポイ活始めませんか？</h1>
+            <h2 class="start-announcement">
+                <span class="start-date">10/27(月)から</span>
+                <span class="start-text">ポイ活スタート</span>
+            </h2>
             <p class="animated-subtitle">お得なポイント還元で、もっと贅沢なひとときを。</p>
             <div class="point-card">
                 <div class="badge">初回限定</div>
@@ -380,46 +373,15 @@
             });
         });
 
-        // 新しいポップアップ表示・非表示
-        const newPopup = document.getElementById('new-popup-overlay');
-        const closeNewBtn = document.getElementById('close-new-popup');
-
-        // ページ読み込み完了時に新しいポップアップを表示
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                newPopup.style.display = 'flex';
-            }, 500); // 0.5秒後に表示
-        });
-
-        // 閉じるボタンをクリックで非表示
-        closeNewBtn.addEventListener('click', () => {
-            newPopup.style.display = 'none';
-        });
-
-        // ポップアップの外側をクリックで非表示
-        newPopup.addEventListener('click', (e) => {
-            if (e.target === newPopup) {
-                newPopup.style.display = 'none';
-            }
-        });
-
-        // 既存のポップアップ表示・非表示
+        // ポップアップ表示・非表示
         const popup = document.getElementById('popup-overlay');
         const closeBtn = document.getElementById('close-popup');
 
-        // 新しいポップアップが閉じられた後に既存のポップアップを表示
-        closeNewBtn.addEventListener('click', () => {
+        // ページ読み込み完了時にポップアップを表示
+        window.addEventListener('load', () => {
             setTimeout(() => {
                 popup.style.display = 'flex';
             }, 1000); // 1秒後に表示
-        });
-
-        newPopup.addEventListener('click', (e) => {
-            if (e.target === newPopup) {
-                setTimeout(() => {
-                    popup.style.display = 'flex';
-                }, 1000); // 1秒後に表示
-            }
         });
 
         // 閉じるボタンをクリックで非表示
