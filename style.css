@@ -256,6 +256,10 @@ h2::after {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    /* 意図しない背景色や枠線をリセット */
+    background-color: transparent;
+    padding: 0;
+    border: none;
 }
 
 .start-announcement::after {
