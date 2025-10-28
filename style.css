@@ -1429,3 +1429,65 @@ h2::after {
         font-size: 0.9rem;
     }
 }
+
+/* 4. ポイント交換対象セクション (シンプルなリスト形式のスタイル) */
+.exchange-table.simple-list {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 0; /* paddingを削除して、中の要素で調整 */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: none; /* 影を削除 */
+    border: none; /* 枠線を削除 */
+}
+
+.exchange-table .exchange-item-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background-color: #ff69b4; /* ヘッダーの背景色 */
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 10px 10px 0 0;
+}
+
+.exchange-table .exchange-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-bottom: 1px solid #fbcfe8;
+    background-color: white;
+}
+
+.exchange-table .exchange-item:nth-child(even) {
+    background-color: #fce7f3;
+}
+
+.exchange-table .exchange-item:last-of-type {
+    border-bottom: none;
+    border-radius: 0 0 10px 10px;
+}
+
+.exchange-table .course-title, .exchange-table .course-name {
+    flex-basis: 60%;
+    text-align: left;
+}
+
+.exchange-table .limit-title, .exchange-table .limit-value {
+    flex-basis: 40%;
+    text-align: right;
+}
+
+.exchange-table .note-exchange {
+    text-align: left;
+    padding: 5px 20px;
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .exchange-table .exchange-item-header, .exchange-table .exchange-item {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
