@@ -1362,3 +1362,70 @@ h2::after {
         opacity: 0.5;
     }
 }
+/* 4. ポイント交換対象セクション (新しい表のスタイル) */
+.usage {
+    background: #fff;
+}
+
+.exchange-table {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ff69b4;
+}
+
+.exchange-table h3 {
+    text-align: center;
+    color: #ff1493;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #fbcfe8;
+    padding-bottom: 10px;
+}
+
+.exchange-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.exchange-table th, .exchange-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #fbcfe8;
+}
+
+.exchange-table th {
+    background-color: #ff69b4;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.exchange-table tr:nth-child(even) {
+    background-color: #fce7f3;
+}
+
+.exchange-table tr:hover {
+    background-color: #fbcfe8;
+}
+
+.note-exchange {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .exchange-table {
+        padding: 15px;
+    }
+    .exchange-table th, .exchange-table td {
+        padding: 10px 5px;
+        font-size: 0.9rem;
+    }
+}
