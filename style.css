@@ -1491,3 +1491,19 @@ h2::after {
         font-size: 0.9rem;
     }
 }
+
+/* 点滅・中央寄せのスタイル */
+.flashing-note {
+    text-align: center !important; /* 強制的に中央寄せ */
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    margin: 10px auto;
+    color: #ff1493; /* 目立つ色 */
+    animation: flash 1s infinite alternate;
+}
+
+@keyframes flash {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
